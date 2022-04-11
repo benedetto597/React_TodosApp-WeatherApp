@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: bene
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: todosApp
+    ports:
+      - 5432:5432
+    volumes:
+      - postgresql-volume:/var/lib/postgresql/data
+volumes: 
+  postgresql-volume:
+    external: true
+    

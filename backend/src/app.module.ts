@@ -2,9 +2,24 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodosModule } from './todos/todos.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Type } from 'class-transformer';
 
 @Module({
-  imports: [TodosModule],
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'admin',
+      password: 'admin',
+      database: 'todosApp',
+      entities: ['dist/**/*.entity{.ts,.js}'],
+      synchronize: true,
+      retryDelay: 3000,
+      retryAttempts: 10,
+    }),
+    TodosModule],
   controllers: [AppController],
   providers: [AppService],
 })

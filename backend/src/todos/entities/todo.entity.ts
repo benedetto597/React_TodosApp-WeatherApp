@@ -1,3 +1,5 @@
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+
 @Entity()
 
 export class Todo {
@@ -10,7 +12,7 @@ export class Todo {
     @Column()
     description: string;
     
-    @Column()
+    @Column({default: false})
     completed: boolean;
     
     @Column()

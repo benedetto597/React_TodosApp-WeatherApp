@@ -15,6 +15,8 @@
 </div>
 
 _____
+
+### Ejecución del aplicativo web en local
 #### Instalaciones necesarias (ejecucion local)
 * [Google Chrome](https://www.google.com/chrome/)
 
@@ -22,32 +24,31 @@ _____
   
 * [Docker](https://docs.docker.com/get-docker/)
 
-* [React]()
-React
-TypeORM
-Nest
-
 ____
 #### Configuración previa de Docker
 1. Crear el volumen externo
   ```
-  docker volume create --name=postgresql-volume
+  docker volume create --name=mysql-volume
   ```
 
 #### Validar la correcta ejecucion de postgresql dockerizado
-1. Verificar que el contenedor este corriendo
+
+1. Ejecutar el contenedor
   ```
-  docker-compose ps
+  docker-compose up -d
   ```
 
-2. Entrar al contenedor de postgresql
+2. Entrar al contenedor de mysql
   ```
-  docker-compose exec database bash
+  docker-compose exec mysql bash
   ```
 
-3. Conectarse a postgesql:
+3. Conectarse a mysql:
   ```
-  psql -h localhost -d todosApp -U bene
+  mysql -h nombre_servidor -u nombre_usuario -p nombre_base_datos
+
+  mysql -h localhost -u admin -p todosApp
+
   ```
 
 #### Instalación de dependencias
@@ -68,8 +69,13 @@ ____
   npm i @nestjs/config @nestjs/typeorm typeorm pg class-validator class-transformer
   ```
 
-
+* 
 #### Frontend
+
+* React
+  ```terminal
+  npm i -g create-react-app
+  ```
 
 ____
 
@@ -77,7 +83,7 @@ ____
 
 1. Directorio raíz:  
   ```
-  docker-compose up -d database
+  docker-compose up -d
   ```
 
 2. Directorio backend 

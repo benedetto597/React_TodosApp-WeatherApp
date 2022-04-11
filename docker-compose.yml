@@ -1,17 +1,21 @@
-version: '3.3'
+version: "2.4"
 
 services:
-  database:
-    image: postgres:13
-    environment:
-      POSTGRES_USER: bene
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: todosApp
-    ports:
-      - 5432:5432
+  mysql:
+    container_name: TodosApp
+    image: mysql:5.7.25
     volumes:
-      - postgresql-volume:/var/lib/postgresql/data
+      - mysql-volume:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    hostname: VIP
+    environment:
+      MYSQL_DATABASE: 'todosApp'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_ROOT_PASSWORD: 'admin'
+
 volumes: 
-  postgresql-volume:
+  mysql-volume:
     external: true
     

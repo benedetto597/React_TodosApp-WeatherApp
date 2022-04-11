@@ -2,14 +2,17 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { TodosService } from './todos.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
+import { GetOneTodoDto } from './dto/getone-todo.dto';
+import { RemoveTodoDto } from './dto/remove-todo.dto';
 
 @Controller('todos')
 export class TodosController {
   constructor(private readonly todosService: TodosService) {}
-
+  
+  // CRUD
   @Post()
-  create(@Body() createTodoDto: CreateTodoDto) {
-    return this.todosService.create(createTodoDto);
+  create(@Body() todo: CreateTodoDto) {
+    return this.todosService.create(todo);
   }
 
   @Get()
@@ -17,18 +20,18 @@ export class TodosController {
     return this.todosService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.todosService.findOne(+id);
+  @Get()
+  findOne(@Body() {id}: GetOneTodoDto) {
+    return this.todosService.findOne(id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateTodoDto: UpdateTodoDto) {
-    return this.todosService.update(+id, updateTodoDto);
+  @Patch()
+  update(@Body() todo: UpdateTodoDto) {
+    return this.todosService.update(todo);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.todosService.remove(+id);
+  @Delete()
+  remove(@Body() {id}: RemoveTodoDto) {
+    return this.todosService.remove(id);
   }
 }

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://www.cloudanalogy.co.uk/wp-content/uploads/2019/06/react.png" style="width:150px; height:150px"> </img>
+<img src="https://miro.medium.com/max/500/1*GGy6YD5EJoWIzT22YWNp1Q.png" style="width:150px; height:150px"> </img>
 
 <!-- Encabezado -->
 ### TodosApp | WeatherApp
@@ -9,7 +9,7 @@
 #### Autor 
 
 | Nombre | Correo |
-|:-------------:| :-----:|:-----:|
+|:-------:|:-----:|
 | Edgar Josué Benedetto Godoy | [Gmail](mailto:ejbg597@gmail.com) |
 
 </div>

@@ -11,7 +11,7 @@ export class Todo {
     description: string;
     
     @Column()
-    status: string;
+    completed: boolean;
     
     @Column()
     createdAt: Date;

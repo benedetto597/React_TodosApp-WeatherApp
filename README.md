@@ -1,35 +1,91 @@
-# React_TodosApp_WeatherApp
+<div align="center">
 
+<img src="https://www.cloudanalogy.co.uk/wp-content/uploads/2019/06/react.png" style="width:150px; height:150px"> </img>
 
+<!-- Encabezado -->
+### TodosApp | WeatherApp
+#### React | Nest | TypeORM | Redux | OpenWeatherMap | NodeJS | PostgreSQL 
+#### Abril 2022
+#### Autor 
 
-### Instalaciones necesarias
+| Nombre | Correo |
+|:-------------:| :-----:|:-----:|
+| Edgar Josué Benedetto Godoy | [Gmail](mailto:ejbg597@gmail.com) |
 
-Docker
-Node
+</div>
+
+_____
+#### Instalaciones necesarias (ejecucion local)
+* [Google Chrome](https://www.google.com/chrome/)
+
+* [Node](https://nodejs.org/es/)
+  
+* [Docker](https://docs.docker.com/get-docker/)
+
+* [React]()
 React
 TypeORM
 Nest
 
+____
+#### Configuración previa de Docker
+1. Crear el volumen externo
+  ```
+  docker volume create --name=postgresql-volume
+  ```
 
-### Ejecucion 
-
-cd backend --> npm start
-cd frontend --> npm start
-docker-compose up -d database
-  crear el volumen externo: docker volume create --name=postgresql-volume
-
-Verificar que el contenedor este corriendo:
+#### Validar la correcta ejecucion de postgresql dockerizado
+1. Verificar que el contenedor este corriendo
+  ```
   docker-compose ps
+  ```
 
-Entrar al contenedor de ps
+2. Entrar al contenedor de postgresql
+  ```
   docker-compose exec database bash
+  ```
 
-### Dependencias
+3. Conectarse a postgesql:
+  ```
+  psql -h localhost -d todosApp -U bene
+  ```
 
-#### Backend dependencies
-* TypeORM
+#### Instalación de dependencias
+
+##### Backend
+* Nest JS 
+  ```terminal
+  npm i -g @nestjs/cli
+  ```
+
+* TypeORM 
+  ```terminal
+  npm i --save @nestjs/typeorm typeorm
+  ```
+  
+* TypeORM Class Validator & Class Transformer
   ```terminal
   npm i @nestjs/config @nestjs/typeorm typeorm pg class-validator class-transformer
   ```
 
-#### Frontend dependencies
+
+#### Frontend
+
+____
+
+#### Ejecucion 
+
+1. Directorio raíz:  
+  ```
+  docker-compose up -d database
+  ```
+
+2. Directorio backend 
+  ``` 
+  npm start
+  ```
+3. Directorio frontend 
+  ```
+  npm start
+  ```
+

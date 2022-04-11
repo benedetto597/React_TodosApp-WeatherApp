@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://miro.medium.com/max/500/1*GGy6YD5EJoWIzT22YWNp1Q.png" style="width:150px; height:150px"> </img>
+<img src="https://miro.medium.com/max/500/1*GGy6YD5EJoWIzT22YWNp1Q.png" style="width:250px; height:150px"> </img>
 
 <!-- Encabezado -->
 ### TodosApp | WeatherApp

@@ -49,6 +49,11 @@ ____
 
   mysql -h localhost -u admin -p todosApp
 
+  docker exec -it TodosApp mysql -uroot -p 
+
+  pass: admin
+
+  Cambiar zona horaria: SET GLOBAL time_zone = ‘-6:00’;
   ```
 
 #### Instalación de dependencias

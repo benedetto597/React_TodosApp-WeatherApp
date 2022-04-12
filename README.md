@@ -96,6 +96,15 @@ ____
   npm i -g create-react-app
   ```
 
+* Redux
+  ```terminal
+  npm install --save redux
+
+  npm install --save react-redux
+
+  npm install --save-dev redux-devtools
+  ```
+
 ____
 
 #### Ejecucion 

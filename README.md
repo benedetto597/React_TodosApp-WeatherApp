@@ -74,6 +74,16 @@ ____
   npm i mysql
   ```
 
+* Swagger
+  ```terminal
+  npm install --save @nestjs/swagger swagger-ui-express
+  ```
+
+* Verify
+  ```terminal
+  npm install verify
+  ```
+
 #### Frontend
 
 * React
@@ -98,4 +108,8 @@ ____
   ```
   npm start
   ```
+##### Opcionales
+
+4. Prueba de la documentación con Swagger
+[Swagger | API Documentación](http://localhost:3000/api)
 

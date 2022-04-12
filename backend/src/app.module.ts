@@ -14,7 +14,7 @@ import { Type } from 'class-transformer';
       username: 'admin',
       password: 'admin',
       database: 'todosApp',
-      entities: ['dist/**/*.entity{.ts,.js}'],
+      entities: ['src/**/*.entity{.ts,.js}'],
       synchronize: true,
       retryDelay: 3000,
       retryAttempts: 10,

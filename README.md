@@ -91,11 +91,6 @@ ____
 
 #### Frontend
 
-* React
-  ```terminal
-  npm i -g create-react-app
-  ```
-
 * Redux
   ```terminal
   npm install --save redux

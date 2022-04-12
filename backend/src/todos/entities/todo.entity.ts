@@ -15,7 +15,10 @@ export class Todo {
     @Column({default: false})
     completed: boolean;
     
-    @Column()
+    @Column({
+        type: 'datetime',
+        default: () => 'NOW()',
+      })
     createdAt: Date;
     
     @Column()

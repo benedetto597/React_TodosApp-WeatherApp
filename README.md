@@ -69,7 +69,11 @@ ____
   npm i @nestjs/config @nestjs/typeorm typeorm pg class-validator class-transformer
   ```
 
-* 
+* Mysql
+  ```terminal
+  npm i mysql
+  ```
+
 #### Frontend
 
 * React

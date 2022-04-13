@@ -1,8 +1,10 @@
 {
     "cSpell.words": [
+        "crossdomain",
         "datetime",
         "getone",
         "nestjs",
+        "todolist",
         "todos",
         "typeorm"
     ]

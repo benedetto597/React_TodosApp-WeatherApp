@@ -48,7 +48,11 @@ ____
   mysql -h nombre_servidor -u nombre_usuario -p nombre_base_datos
 
   mysql -h localhost -u admin -p todosApp
+  ```
 
+
+  * Conectarse a mysql con el usuario root y cambiar zona horaria
+  ```
   docker exec -it TodosApp mysql -uroot -p 
 
   pass: admin
@@ -98,6 +102,11 @@ ____
   npm install --save react-redux
 
   npm install --save-dev redux-devtools
+  ```
+
+* Axios 
+  ```terminal
+  npm install --save axios
   ```
 
 ____

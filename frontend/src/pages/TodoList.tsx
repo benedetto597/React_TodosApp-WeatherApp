@@ -7,9 +7,9 @@ import {
   update,
   get,
   fetchTodos,
-} from './todoListSlice';
-import styles from './TodoList.module.css';
-import { Task } from './Task';
+} from '../utils/todoListAPI';
+import styles from '../styles/TodoList.module.css';
+import { Task } from '../components/Task';
 import { v4 as uuid } from 'uuid';
 
 export function TodoList() {
@@ -22,8 +22,8 @@ export function TodoList() {
 
   // UseEffect to set todos
   useEffect(() => {
-    fetchTodos();
-  }, [todos]);
+    dispatch(fetchTodos());
+  }, []);
   
   return (
     <div>

@@ -1,9 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import { TodoList } from './features/todoList/TodoList';
+import { TodoList } from './pages/TodoList';
 import './App.css';
-import ErrorBoundary from './features/todoList/Errors';
+import ErrorBoundary from './components/Errors';
 
 function App() {
   return (

@@ -27,11 +27,13 @@ export function TodoList() {
   
   return (
     <div>
-      <ul>
-        {todos.map(t => <Task key={t.id} todo={t}/>)}
-      </ul>
+      
+
+
+
+
       <div className={styles.row}>
-        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input className={styles.textbox} type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
         <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
         <input type="checkbox" checked={completed} onChange={(e) => setCompleted(e.target.checked)} />
         <button onClick={() => dispatch(add({ 
@@ -41,6 +43,9 @@ export function TodoList() {
           completed,
           }))}>➕</button>
       </div>
+      <ul>
+        {todos.map(t => <Task key={t.id} todo={t}/>)}
+      </ul>
     </div>
   );
 }

@@ -38,11 +38,12 @@
 }
 
 .textbox {
-  font-size: 32px;
+  font-size: 26px;
   padding: 2px;
-  width: 64px;
+  width: 200px;
   text-align: center;
   margin-right: 4px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .button:hover,

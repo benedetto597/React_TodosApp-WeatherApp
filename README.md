@@ -57,7 +57,7 @@ ____
 
   pass: admin
 
-  Cambiar zona horaria: SET GLOBAL time_zone = ‘-6:00’;
+  Cambiar zona horaria: SET GLOBAL time_zone = '-6:00';
   ```
 
 #### Instalación de dependencias
